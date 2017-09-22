@@ -1,0 +1,44 @@
+ body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+      
+    .user{
+    	margin-top: 4%;
+    }
+
+    .logo{
+        height: 50px;
+    }
+
+    .name{
+        font-family: black;
+    }
+
+
+ .animate-area {
+     color: white;
+     text-align: center;
+     background-position: 0px 0px;
+     background-repeat: repeat-x;
+     animation: slide 40s linear infinite;
+
+ }
+ .coment{
+     margin-top: 150px;
+ }
+
+ @-webkit-keyframes slide {
+     from { background-position:  0; }
+     to { background-position: 100%; }
+ }
+
+ @-moz-keyframes slide {
+     from { background-position: 50% 0; }
+     to { background-position: 50% 100%; }
+ }
