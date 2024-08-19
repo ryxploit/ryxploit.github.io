@@ -1,249 +1,134 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Carlos leon</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" href="assets/images/logoleon.png">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carlos León - Desarrollador Web & Móvil</title>
+    <meta name="description" content="Carlos León, desarrollador web y móvil. Innovación y calidad en cada proyecto.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Vue.js CDN -->
+    <script src="https://unpkg.com/vue@3"></script>
+    
+    <!-- Iconos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <!--        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">-->
-
-
-        <!--For Plugins external css-->
-        <link rel="stylesheet" href="assets/css/plugins.css" />
-		<link rel="stylesheet" href="assets/css/magnific-popup.css">
-
-        <link rel="stylesheet" href="assets/css/nexa-web-font.css" />
-        <link rel="stylesheet" href="assets/css/opensans-web-font.css" />
-
-        <!--Theme custom css -->
-        <link rel="stylesheet" href="assets/css/style.css">
-
-        <!--Theme Responsive css-->
-        <link rel="stylesheet" href="assets/css/responsive.css" />
-
-        <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-		<div class='preloader'><div class='loaded'>&nbsp;</div></div>
-
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
+    <!-- Animate on Scroll (AOS) CSS and JS for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <div id="app">
+        <!-- Navbar -->
+        <nav class="bg-white shadow-md fixed w-full z-50">
+            <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+                <a href="#home" class="text-xl font-semibold">Carlos León</a>
+                <div class="space-x-4">
+                    <a href="#about" class="hover:text-indigo-600 transition">Sobre mí</a>
+                    <a href="#skills" class="hover:text-indigo-600 transition">Habilidades</a>
+                    <a href="#contact" class="hover:text-indigo-600 transition">Contacto</a>
                 </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="active hidden-md hidden-lg"><a href="#home">Inicio</a></li>
-                        <li><a href="#about">Sobre mi</a></li>
-                        <li><a href="#portfolio">Portafolio</a></li>
-                        <li><a href="#contact">Contacto</a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
+            </div>
         </nav>
 
-        <!--Home page style-->
-        <header id="home" class="home">
-			<div class="overlay sections">
-				<div class="container">
+        <!-- Hero Section -->
+        <section id="home" class="h-screen bg-gradient-to-r from-indigo-500 to-blue-400 flex justify-center items-center text-white">
+            <div class="text-center" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="text-4xl font-bold">Carlos León</h1>
+                <p class="text-lg mt-4">Desarrollador Web & Móvil</p>
+                <div class="mt-6 space-x-4">
+                    <i class="fa-brands fa-html5 text-3xl"></i>
+                    <i class="fa-brands fa-css3 text-3xl"></i>
+                    <i class="fa-brands fa-js text-3xl"></i>
+                    <i class="fa-brands fa-vuejs text-3xl"></i>
+                </div>
+                <a href="#about" class="mt-8 inline-block px-6 py-3 bg-white text-indigo-600 font-semibold rounded-full shadow-md hover:bg-gray-100 transition">Saber más</a>
+            </div>
+        </section>
 
-					<div class="row">
-						<div class="wrapper">
-							<div class="col-md-6 col-md-offset-3">
-
-								<div class="home-details text-center">
-
-									<div class="home-title">
-
-                    <hr class="">
-                    <h1><span>CARLOS LEON</span></h1>
-                    <hr>
-										<span>DESARROLLADOR WEB   <i class="fa fa-html5  fa-1x  fa-fw"></i>
-                      <i class="fa fa-css3  fa-1x  fa-fw"></i></span>
-									</div>
-
-									<div class="scroll-down">
-										<a href="#about"><i class="fa fa-angle-double-down"></i></a>
-									</div>
-
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-        </header>
-
-        <!-- Sections -->
-        <section id="about" class="about sections">
-            <div class="container">
-
-                <!-- Example row of columns -->
-                <div class="row">
-                    <div class="wrapper">
-
-                    	<div class="col-md-6">
-                    		<div class="about-photo">
-								<img src="assets/images/perfil.jpg" alt="About Image" />
-							</div>
-                    	</div>
-
-						<div class="col-md-6">
-                <div class="heading about-content">
-								  <h3>Sobre mi</h3>
-								  <p>Soy un joven autodidacta apasionado por la programacion y sus variantes. En mi tiempo libre me gusta informarme leyendo noticias ,
-                  artículos o mirar vídeos relacionados con el hacking ,la seguridad informática , la programación etc ,Me queda mucho por aprender pero lo poco que sé intento compartirlo .
-                  El sistema operativo que uso generalmente es Linux, y windows para mis montajes , probar utilizar algunas herramientas . Tambien me gusta el desarrollo web .</p>
-
-                  <a href="https://drive.google.com/open?id=1cF5wMPoAyNbLc6k5vQh4mGagTQsJtBq3betZPRTUpCM" class="btn btn-primary btn-lg " role="button" aria-pressed="true">Descargar cv</a>
-
-							</div>
-                    	</div>
-
-
-
+        <!-- About Section -->
+        <section id="about" class="py-16 bg-white">
+            <div class="container mx-auto px-4" data-aos="fade-up" data-aos-duration="1000">
+                <div class="flex flex-col md:flex-row items-center">
+                    <img src="assets/images/perfil.jpg" alt="Carlos León" class="w-48 h-48 rounded-full shadow-lg mb-8 md:mb-0">
+                    <div class="md:ml-8">
+                        <h2 class="text-3xl font-bold mb-4">Sobre mí</h2>
+                        <p class="text-lg text-gray-700 mb-4">Soy un desarrollador apasionado por la tecnología. Me especializo en el desarrollo de aplicaciones web y móviles, con experiencia en frameworks modernos como Vue.js y tecnologías como Tailwind CSS.</p>
+                        <a href="https://drive.google.com/open?id=1cF5wMPoAyNbLc6k5vQh4mGagTQsJtBq3betZPRTUpCM" class="bg-indigo-600 text-white py-2 px-4 rounded-full shadow hover:bg-indigo-700 transition">Descargar CV</a>
                     </div>
                 </div>
-
-				<div class="scroll-down">
-					<a href="#portfolio"><i class="fa fa-angle-double-down"></i></a>
-				</div>
-
-            </div> <!-- /container -->
-        </section>
-
-
-		<!-- Sections -->
-        <section id="portfolio" class="portfolio">
-			<div class="overlay sections">
-				<div class="container">
-
-					<div class="heading text-center">
-						<div class="title">
-							<h3>Portafolio</h3>
-						</div>
-					</div>
-
-					<!-- Example row of columns -->
-
-					<div class="row">
-						<div class="portfolio-wrapper">
-							<div class="portfolio-item">
-
-								<div class="portfolio-details">
-									<a href="assets/images/portfolio/gatocolor.png" class="portfolio-img"><img src="assets/images/portfolio/gatocolor.png" alt="Portfolio" /></a>
-								</div>
-
-							</div>
-
-							<div class="portfolio-item">
-
-								<div class="portfolio-details">
-									<a href="assets/images/portfolio/checador.png" class="portfolio-img"><img src="assets/images/portfolio/checador.png" alt="Portfolio" /></a>
-								</div>
-
-							</div>
-
-							<div class="portfolio-item">
-
-								<div class="portfolio-details">
-									<a href="assets/images/portfolio/barcode-escualo.png" class="portfolio-img"><img src="assets/images/portfolio/barcode-escualo.png" alt="Portfolio" /></a>
-								</div>
-
-							</div>
-
-							<!-- aqui los proyecto a futuro -->
-
-
-							<div class="scroll-down">
-								<a href="#contact"><i class="fa fa-angle-double-down"></i></a>
-							</div>
-
-						</div>
-					</div>
-				</div> <!-- /container -->
-			</div>
-        </section>
-
-		<section id="contact" class="contact sections">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 col-md-offset-3">
-						<div class="contact-details text-center">
-
-							<div class="contact-category">
-								<div class="mail">
-									<h4>Correo :</h4>
-									<h2>ryxploit@gmail.com</h2>
-								</div>
-							</div>
-
-							<div class="contact-category">
-								<div class="phone">
-									<h4>Teléfono :</h4>
-									<h5>+52 66 91 60 67 03 </h5>
-								</div>
-							</div>
-
-							<div class="contact-category">
-								<div class="social">
-									<h4>Medios de comunicación social :</h4>
-									<a href="https://www.facebook.com/carlos.dvlprs"><i class="fa fa-facebook"></i></a>
-									<a href="https://github.com/ryxploit"><i class="fa fa-github"></i></a>
-									<a href="https://www.instagram.com/ryxploit/"><i class="fa fa-instagram"></i></a>
-								</div>
-							</div>
-              <div class="scroll-down ">
-                <a href="#home"><i class="fa fa-angle-double-up "></i></a>
-              </div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-
-        <!--Footer-->
-        <footer id="footer" class="footer">
-            <div class="container">
-            	<div class="row">
-            		<div class="col-md-12">
-            			<div class="copyright text-center">
-            				<p>Carlos leon <i class="fa fa-heart"></i> 2017 Todos derechos reservados.</p>
-            			</div>
-            		</div>
-            	</div>
             </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold mb-12" data-aos="fade-up" data-aos-duration="1000">Habilidades</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white shadow-lg rounded-lg p-6" data-aos="zoom-in" data-aos-duration="1000">
+                        <h3 class="text-xl font-semibold mb-4">Frontend</h3>
+                        <ul class="space-y-2">
+                            <li class="text-gray-700"><i class="fa-brands fa-html5 text-red-500"></i> HTML5</li>
+                            <li class="text-gray-700"><i class="fa-brands fa-css3 text-blue-500"></i> CSS3</li>
+                            <li class="text-gray-700"><i class="fa-brands fa-js text-yellow-500"></i> JavaScript</li>
+                            <li class="text-gray-700"><i class="fa-brands fa-vuejs text-green-500"></i> Vue.js</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white shadow-lg rounded-lg p-6" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+                        <h3 class="text-xl font-semibold mb-4">Backend</h3>
+                        <ul class="space-y-2">
+                            <li class="text-gray-700"><i class="fa-solid fa-database text-purple-500"></i> Node.js</li>
+                            <li class="text-gray-700"><i class="fa-solid fa-database text-green-500"></i> MongoDB</li>
+                            <li class="text-gray-700"><i class="fa-solid fa-database text-blue-500"></i> MySQL</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white shadow-lg rounded-lg p-6" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
+                        <h3 class="text-xl font-semibold mb-4">Herramientas</h3>
+                        <ul class="space-y-2">
+                            <li class="text-gray-700"><i class="fa-brands fa-git-alt text-orange-500"></i> Git</li>
+                            <li class="text-gray-700"><i class="fa-brands fa-docker text-blue-500"></i> Docker</li>
+                            <li class="text-gray-700"><i class="fa-brands fa-aws text-yellow-500"></i> AWS</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 bg-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold mb-8" data-aos="fade-up" data-aos-duration="1000">Contacto</h2>
+                <p class="text-lg text-gray-700 mb-4">Correo: <a href="mailto:ryxploit@gmail.com" class="text-indigo-600">ryxploit@gmail.com</a></p>
+                <div class="space-x-4">
+                    <a href="https://www.facebook.com/carlos.dvlprs" class="text-indigo-600 hover:text-indigo-800 transition"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="https://github.com/ryxploit" class="text-indigo-600 hover:text-indigo-800 transition"><i class="fab fa-github fa-2x"></i></a>
+                    <a href="https://www.instagram.com/ryxploit/" class="text-indigo-600 hover:text-indigo-800 transition"><i class="fab fa-instagram fa-2x"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-6 bg-indigo-600 text-white text-center">
+            <p>&copy; 2024 Carlos León. Todos los derechos reservados.</p>
         </footer>
+    </div>
 
-
-        <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
-        <script src="assets/js/vendor/bootstrap.min.js"></script>
-
-        <script src="assets/js/plugins.js"></script>
-		<script src="assets/js/jquery.magnific-popup.js"></script>
-
-
-        <script src="assets/js/main.js"></script>
-    </body>
+    <!-- Vue.js Init -->
+    <script>
+        const { createApp } = Vue;
+        createApp({
+            data() {
+                return {
+                    // Aquí puedes agregar datos reactivos
+                };
+            },
+            mounted() {
+                AOS.init();
+            }
+        }).mount('#app');
+    </script>
+</body>
 </html>
