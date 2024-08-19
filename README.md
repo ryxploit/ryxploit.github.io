@@ -1,37 +1,26 @@
-## Welcome to GitHub Pages
+# Portafolio de Carlos León - Desarrollador Web & Móvil
 
-You can use the [editor on GitHub](https://github.com/ryxploit/ryxploit.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Este es mi portafolio personal que muestra mis habilidades y experiencia como desarrollador web y móvil. El sitio web incluye un diseño interactivo con una animación de "lluvia de código" y se enfoca en una experiencia de usuario optimizada.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Demo
+Puedes ver una versión en vivo de este proyecto [aquí](#).
 
-### Markdown
+## Captura de Pantalla
+![Captura de Pantalla](assets/images/screenshot.png)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Tecnologías Utilizadas
+- **HTML5**
+- **CSS3**
+- **Tailwind CSS**
+- **Vue.js**
+- **JavaScript**
+- **FontAwesome**
+- **AOS (Animate on Scroll)**
 
-```markdown
-Syntax highlighted code block
+## Características
+- **Animación interactiva**: Efecto de "lluvia de código binario" al cargar la página.
+- **Diseño responsivo**: Compatible con dispositivos móviles, tabletas y pantallas grandes.
+- **UI/UX optimizado**: Animaciones suaves y experiencia de usuario centrada en desarrolladores.
+- **Transiciones suaves**: El contenido aparece suavemente tras la carga inicial.
+- **Paleta de colores**: Diseño monocromático con acentos en verde, dando una apariencia tecnológica.
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ryxploit/ryxploit.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
