@@ -1,11 +1,12 @@
 ---
+import '../styles/global.css';
+
 export interface Props {
 	title: string;
 	description?: string;
 }
 
 const { title, description = "Portafolio profesional de ryxploit - Desarrollador Full Stack" } = Astro.props;
-import '../styles/global.css';
 ---
 
 <!doctype html>
