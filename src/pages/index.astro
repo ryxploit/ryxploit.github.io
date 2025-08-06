@@ -1,0 +1,512 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="ryxploit - Desarrollador Full Stack">
+    <body class="bg-gray-50">
+        <!-- Header/Hero Section -->
+        <header class="gradient-bg text-white min-h-screen flex items-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-black opacity-10"></div>
+            <!-- Animated background elements -->
+            <div class="absolute inset-0 overflow-hidden">
+                <div class="absolute top-20 left-10 w-20 h-20 bg-white bg-opacity-5 rounded-full floating" style="animation-delay: 0s;"></div>
+                <div class="absolute top-40 right-20 w-16 h-16 bg-white bg-opacity-5 rounded-full floating" style="animation-delay: 1s;"></div>
+                <div class="absolute bottom-40 left-20 w-12 h-12 bg-white bg-opacity-5 rounded-full floating" style="animation-delay: 2s;"></div>
+                <div class="absolute bottom-20 right-10 w-24 h-24 bg-white bg-opacity-5 rounded-full floating" style="animation-delay: 0.5s;"></div>
+            </div>
+            
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="max-w-4xl mx-auto text-center">
+                    <div class="floating mb-6 sm:mb-8">
+                        <div class="w-24 h-24 sm:w-32 sm:h-32 mx-auto bg-white rounded-full flex items-center justify-center text-4xl sm:text-6xl text-gray-700 shadow-2xl glow">
+                            👨‍💻
+                        </div>
+                    </div>
+                    <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 slide-in-up">
+                        Hola, soy <span class="typing-animation" id="name">Desarrollador</span>
+                    </h1>
+                    <p class="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 opacity-90 slide-in-up px-4" style="animation-delay: 0.2s;">
+                        Full Stack Developer especializado en crear experiencias digitales excepcionales
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sm:mb-12 px-4">
+                        <span class="bg-white bg-opacity-20 px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium  stagger-animation" style="--delay: 0.3s;">React</span>
+                        <span class="bg-white bg-opacity-20 px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium stagger-animation" style="--delay: 0.4s;">Node.js</span>
+                        <span class="bg-white bg-opacity-20 px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium stagger-animation" style="--delay: 0.5s;">Flutter</span>
+                        <span class="bg-white bg-opacity-20 px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium stagger-animation" style="--delay: 0.6s;">UI/UX</span>
+                    </div>
+                    <button onclick="scrollToSection('skills')" class="bg-white text-gray-800 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg  text-sm sm:text-base">
+                        Ver mis habilidades <i class="fas fa-arrow-down ml-2 "></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Scroll indicator -->
+            <div class="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 text-white opacity-70">
+                <div class="animate-bounce">
+                    <i class="fas fa-chevron-down text-xl sm:text-2xl"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-12 sm:py-16 lg:py-20 bg-gray-100">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 sm:mb-16 section-fade">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4 ">
+                        🧠 Habilidades Técnicas
+                    </h2>
+                    <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4 fade-in-scale" style="animation-delay: 0.2s;">
+                        Tecnologías y herramientas que domino para crear soluciones completas
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+                    <!-- Desarrollo Web -->
+                    <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-lg card-hover section-fade border border-gray-100 slide-in-left stagger-animation" style="--delay: 0.1s;">
+                        <div class="text-3xl sm:text-4xl mb-4">🌐</div>
+                        <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-4">Desarrollo Web</h3>
+                        <div class="space-y-2">
+                            <div class="skill-tag bg-gray-200 text-black px-3 py-1 rounded-full text-xs sm:text-sm inline-block mr-2 mb-2">HTML5</div>
+                            <div class="skill-tag bg-gray-200 text-black px-3 py-1 rounded-full text-xs sm:text-sm inline-block mr-2 mb-2">CSS3</div>
+                            <div class="skill-tag bg-gray-200 text-black px-3 py-1 rounded-full text-xs sm:text-sm inline-block mr-2 mb-2">JavaScript ES6+</div>
+                            <div class="skill-tag bg-gray-200 text-black px-3 py-1 rounded-full text-xs sm:text-sm inline-block mr-2 mb-2">React</div>
+                            <div class="skill-tag bg-gray-200 text-black px-3 py-1 rounded-full text-xs sm:text-sm inline-block mr-2 mb-2">Vue</div>
+                            <div class="skill-tag bg-gray-200 text-black px-3 py-1 rounded-full text-xs sm:text-sm inline-block mr-2 mb-2">Next.js</div>
+                            <div class="skill-tag bg-gray-200 text-black px-3 py-1 rounded-full text-xs sm:text-sm inline-block mr-2 mb-2">SASS</div>
+                            <div class="skill-tag bg-gray-200 text-black px-3 py-1 rounded-full text-xs sm:text-sm inline-block mr-2 mb-2">TailwindCSS</div>
+                        </div>
+                    </div>
+
+                    <!-- Desarrollo Móvil -->
+                    <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-lg card-hover section-fade border border-gray-100 slide-in-right stagger-animation" style="--delay: 0.2s;">
+                        <div class="text-3xl sm:text-4xl mb-4" style="animation-delay: 0.5s;">📱</div>
+                        <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-4">Desarrollo Móvil</h3>
+                        <div class="space-y-2">
+                            <div class="skill-tag bg-gray-200 text-black px-3 py-1 rounded-full text-xs sm:text-sm inline-block mr-2 mb-2">Flutter</div>
+                            <div class="skill-tag bg-gray-200 text-black px-3 py-1 rounded-full text-xs sm:text-sm inline-block mr-2 mb-2">React Native</div>
+                            <div class="skill-tag bg-gray-200 text-black px-3 py-1 rounded-full text-xs sm:text-sm inline-block mr-2 mb-2">iOS & Android</div>
+                            <div class="skill-tag bg-gray-200 text-black px-3 py-1 rounded-full text-xs sm:text-sm inline-block mr-2 mb-2">APIs REST</div>
+                            <div class="skill-tag bg-gray-200 text-black px-3 py-1 rounded-full text-xs sm:text-sm inline-block mr-2 mb-2">Bluetooth</div>
+                        </div>
+                    </div>
+
+                    <!-- Backend -->
+                    <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-lg card-hover section-fade border border-gray-100 slide-in-left stagger-animation" style="--delay: 0.3s;">
+                        <div class="text-3xl sm:text-4xl mb-4" style="animation-delay: 1s;">⚙️</div>
+                        <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-4">Backend & BD</h3>
+                        <div class="space-y-2">
+                            <div class="skill-tag bg-gray-200 text-black px-3 py-1 rounded-full text-xs sm:text-sm inline-block mr-2 mb-2">Node.js</div>
+                            <div class="skill-tag bg-gray-200 text-black px-3 py-1 rounded-full text-xs sm:text-sm inline-block mr-2 mb-2">Express.js</div>
+                            <div class="skill-tag bg-gray-200 text-black px-3 py-1 rounded-full text-xs sm:text-sm inline-block mr-2 mb-2">Firebase</div>
+                            <div class="skill-tag bg-gray-200 text-black px-3 py-1 rounded-full text-xs sm:text-sm inline-block mr-2 mb-2">Supabase</div>
+                            <div class="skill-tag bg-gray-200 text-black px-3 py-1 rounded-full text-xs sm:text-sm inline-block mr-2 mb-2">PostgreSQL</div>
+                            <div class="skill-tag bg-gray-200 text-black px-3 py-1 rounded-full text-xs sm:text-sm inline-block mr-2 mb-2">MongoDB</div>
+                            <div class="skill-tag bg-gray-200 text-black px-3 py-1 rounded-full text-xs sm:text-sm inline-block mr-2 mb-2">JWT</div>
+                        </div>
+                    </div>
+
+                    <!-- DevOps -->
+                    <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-lg card-hover section-fade border border-gray-100 slide-in-right stagger-animation" style="--delay: 0.4s;">
+                        <div class="text-3xl sm:text-4xl mb-4" style="animation-delay: 1.5s;">🚀</div>
+                        <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-4">DevOps & Deploy</h3>
+                        <div class="space-y-2">
+                            <div class="skill-tag bg-gray-200 text-black px-3 py-1 rounded-full text-xs sm:text-sm inline-block mr-2 mb-2">Git & GitHub</div>
+                            <div class="skill-tag bg-gray-200 text-black px-3 py-1 rounded-full text-xs sm:text-sm inline-block mr-2 mb-2">GitHub Actions</div>
+                            <div class="skill-tag bg-black text-white px-3 py-1 rounded-full text-xs sm:text-sm inline-block mr-2 mb-2">Vercel</div>
+                            <div class="skill-tag bg-gray-200 text-black px-3 py-1 rounded-full text-xs sm:text-sm inline-block mr-2 mb-2">Netlify</div>
+                            <div class="skill-tag bg-gray-200 text-black px-3 py-1 rounded-full text-xs sm:text-sm inline-block mr-2 mb-2">Render</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyectos Section -->
+        <section id="projects" class="py-12 sm:py-16 lg:py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 sm:mb-16 section-fade">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4">🛠️ Proyectos Destacados</h2>
+                    <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">Algunos de los proyectos en los que he trabajado recientemente</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                    <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 border border-gray-100 card-hover section-fade">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Proyecto 1</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Breve descripción del proyecto y las tecnologías utilizadas.</p>
+                        <a href="#" class="text-blue-600 font-medium hover:underline text-sm">Ver más →</a>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 border border-gray-100 card-hover section-fade">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Proyecto 2</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Breve descripción del proyecto y las tecnologías utilizadas.</p>
+                        <a href="#" class="text-blue-600 font-medium hover:underline text-sm">Ver más →</a>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 border border-gray-100 card-hover section-fade">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Proyecto 3</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Breve descripción del proyecto y las tecnologías utilizadas.</p>
+                        <a href="#" class="text-blue-600 font-medium hover:underline text-sm">Ver más →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-12 sm:py-16 lg:py-20 bg-white hidden">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-12 sm:mb-16 section-fade">
+                        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4 slide-in-left">
+                            🎨 Diseño UI/UX
+                        </h2>
+                        <p class="text-lg sm:text-xl text-gray-600 px-4 slide-in-right" style="animation-delay: 0.2s;">
+                            Creando experiencias digitales centradas en el usuario
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-center">
+                        <div class="section-fade slide-in-left" style="animation-delay: 0.3s;">
+                            <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-lg glow">
+                                <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-6">Mis enfoques de diseño</h3>
+                                <div class="space-y-4">
+                                    <div class="flex items-center space-x-4 fade-in-scale stagger-animation" style="--delay: 0.4s;">
+                                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gray-200 rounded-full flex items-center justify-center">
+                                            <i class="fas fa-users text-black"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-800 text-sm sm:text-base">Diseño centrado en el usuario</h4>
+                                            <p class="text-gray-600 text-xs sm:text-sm">Investigación y testing para crear experiencias intuitivas</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center space-x-4 fade-in-scale stagger-animation" style="--delay: 0.5s;">
+                                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gray-200 rounded-full flex items-center justify-center">
+                                            <i class="fas fa-mobile-alt text-black"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-800 text-sm sm:text-base">Mobile-first & Responsive</h4>
+                                            <p class="text-gray-600 text-xs sm:text-sm">Diseños que funcionan perfectamente en todos los dispositivos</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center space-x-4 fade-in-scale stagger-animation" style="--delay: 0.6s;">
+                                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gray-200 rounded-full flex items-center justify-center">
+                                            <i class="fas fa-universal-access text-black"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-800 text-sm sm:text-base">Accesibilidad (WCAG)</h4>
+                                            <p class="text-gray-600 text-xs sm:text-sm">Interfaces inclusivas para todos los usuarios</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section-fade slide-in-right" style="animation-delay: 0.4s;">
+                            <div class="space-y-4">
+                                <div class="skill-tag bg-gray-200 text-black px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm inline-block mr-2 sm:mr-3 mb-3 bounce-in stagger-animation" style="--delay: 0.5s;">Figma</div>
+                                <div class="skill-tag bg-gray-200 text-black px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm inline-block mr-2 sm:mr-3 mb-3 bounce-in stagger-animation" style="--delay: 0.6s;">Adobe XD</div>
+                                <div class="skill-tag bg-gray-200 text-black px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm inline-block mr-2 sm:mr-3 mb-3 bounce-in stagger-animation" style="--delay: 0.7s;">Prototipado</div>
+                                <div class="skill-tag bg-gray-200 text-black px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm inline-block mr-2 sm:mr-3 mb-3 bounce-in stagger-animation" style="--delay: 0.8s;">Sistemas de Diseño</div>
+                                <div class="skill-tag bg-gray-200 text-black px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm inline-block mr-2 sm:mr-3 mb-3 bounce-in stagger-animation" style="--delay: 0.9s;">Branding Digital</div>
+                                <div class="skill-tag bg-gray-200 text-black px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm inline-block mr-2 sm:mr-3 mb-3 bounce-in stagger-animation" style="--delay: 1s;">Design Thinking</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Soft Skills Section -->
+        <section class="py-12 sm:py-16 lg:py-20 bg-gray-100">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 sm:mb-16 section-fade">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4 bounce-in">
+                        🚀 Soft Skills
+                    </h2>
+                    <p class="text-lg sm:text-xl text-gray-600 px-4 slide-in-up" style="animation-delay: 0.2s;">
+                        Las habilidades que me permiten liderar proyectos exitosos
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+                    <div class="text-center section-fade fade-in-scale stagger-animation" style="--delay: 0.1s;">
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 bg-black rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl sm:text-2xl glow">
+                            🧠
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2">Autodidacta</h3>
+                        <p class="text-sm sm:text-base text-gray-600 px-2">Aprendizaje continuo y adaptación a nuevas tecnologías</p>
+                    </div>
+
+                    <div class="text-center section-fade fade-in-scale stagger-animation" style="--delay: 0.2s;">
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 bg-black rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl sm:text-2xl glow" style="animation-delay: 0.5s;">
+                            💡
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2">Pensamiento Creativo</h3>
+                        <p class="text-sm sm:text-base text-gray-600 px-2">Soluciones innovadoras para problemas complejos</p>
+                    </div>
+
+                    <div class="text-center section-fade fade-in-scale stagger-animation" style="--delay: 0.3s;">
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 bg-black rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl sm:text-2xl glow" style="animation-delay: 1s;">
+                            🎯
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2">Liderazgo</h3>
+                        <p class="text-sm sm:text-base text-gray-600 px-2">Capacidad para liderar proyectos desde cero</p>
+                    </div>
+
+                    <div class="text-center section-fade fade-in-scale stagger-animation" style="--delay: 0.4s;">
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 bg-black rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl sm:text-2xl glow" style="animation-delay: 1.5s;">
+                            🤝
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2">Trabajo en Equipo</h3>
+                        <p class="text-sm sm:text-base text-gray-600 px-2">Colaboración efectiva remota y presencial</p>
+                    </div>
+
+                    <div class="text-center section-fade fade-in-scale stagger-animation" style="--delay: 0.5s;">
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 bg-black rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl sm:text-2xl glow" style="animation-delay: 2s;">
+                            ⚡
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2">Proactividad</h3>
+                        <p class="text-sm sm:text-base text-gray-600 px-2">Iniciativa y anticipación a las necesidades del proyecto</p>
+                    </div>
+
+                    <div class="text-center section-fade fade-in-scale stagger-animation" style="--delay: 0.6s;">
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 bg-black rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl sm:text-2xl glow" style="animation-delay: 2.5s;">
+                            🔄
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2">Adaptabilidad</h3>
+                        <p class="text-sm sm:text-base text-gray-600 px-2">Flexibilidad ante cambios y nuevos desafíos</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="py-12 sm:py-16 lg:py-20 bg-white hidden">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 sm:mb-16 section-fade">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                        🔧 Automatización e Integraciones
+                    </h2>
+                    <p class="text-lg sm:text-xl text-gray-600 px-4 fade-in-scale" style="animation-delay: 0.2s;">
+                        Conectando sistemas y automatizando procesos
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+                    <div class="bg-white rounded-2xl p-6 shadow-lg card-hover section-fade slide-in-left stagger-animation glow" style="--delay: 0.1s;">
+                        <div class="text-2xl sm:text-3xl mb-4">🔗</div>
+                        <h3 class="text-base sm:text-lg font-bold text-gray-800 mb-3">Herramientas</h3>
+                        <div class="space-y-2">
+                            <div class="skill-tag bg-gray-200 text-black px-3 py-1 rounded-full text-xs sm:text-sm inline-block mr-2 mb-2">n8n</div>
+                            <div class="skill-tag bg-gray-200 text-black px-3 py-1 rounded-full text-xs sm:text-sm inline-block mr-2 mb-2">Zapier</div>
+                            <div class="skill-tag bg-gray-200 text-black px-3 py-1 rounded-full text-xs sm:text-sm inline-block mr-2 mb-2">Webhooks</div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-6 shadow-lg card-hover section-fade slide-in-up stagger-animation glow" style="--delay: 0.2s;">
+                        <div class="text-2xl sm:text-3xl mb-4" style="animation-delay: 0.5s;">💳</div>
+                        <h3 class="text-base sm:text-lg font-bold text-gray-800 mb-3">Pagos</h3>
+                        <div class="space-y-2">
+                            <div class="skill-tag bg-gray-200 text-black px-3 py-1 rounded-full text-xs sm:text-sm inline-block mr-2 mb-2">Stripe</div>
+                            <div class="skill-tag bg-gray-200 text-black px-3 py-1 rounded-full text-xs sm:text-sm inline-block mr-2 mb-2">Apple Pay</div>
+                            <div class="skill-tag bg-gray-200 text-black px-3 py-1 rounded-full text-xs sm:text-sm inline-block mr-2 mb-2">Google Pay</div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-6 shadow-lg card-hover section-fade slide-in-right stagger-animation glow" style="--delay: 0.3s;">
+                        <div class="text-2xl sm:text-3xl mb-4" style="animation-delay: 1s;">🔌</div>
+                        <h3 class="text-base sm:text-lg font-bold text-gray-800 mb-3">APIs Externas</h3>
+                        <div class="space-y-2">
+                            <div class="skill-tag bg-gray-200 text-black px-3 py-1 rounded-full text-xs sm:text-sm inline-block mr-2 mb-2">WhatsApp API</div>
+                            <div class="skill-tag bg-gray-200 text-black px-3 py-1 rounded-full text-xs sm:text-sm inline-block mr-2 mb-2">Google Calendar</div>
+                            <div class="skill-tag bg-gray-200 text-black px-3 py-1 rounded-full text-xs sm:text-sm inline-block mr-2 mb-2">Slack</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact/CTA Section -->
+        <section class="py-12 sm:py-16 lg:py-20 gradient-bg text-white relative overflow-hidden">
+            <!-- Animated background elements -->
+            <div class="absolute inset-0 overflow-hidden">
+                <div class="absolute top-10 left-5 w-32 h-32 bg-white bg-opacity-5 rounded-full floating" style="animation-delay: 0s;"></div>
+                <div class="absolute bottom-10 right-5 w-24 h-24 bg-white bg-opacity-5 rounded-full floating" style="animation-delay: 1.5s;"></div>
+            </div>
+            
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <div class="max-w-4xl mx-auto section-fade">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 slide-in-up">
+                        ¿Listo para crear algo increíble juntos?
+                    </h2>
+                    <p class="text-lg sm:text-xl mb-6 sm:mb-8 opacity-90 px-4 fade-in-scale" style="animation-delay: 0.2s;">
+                        Transformemos tus ideas en soluciones digitales que marquen la diferencia
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-3 sm:gap-4">
+                        <button onclick="openContact('email')" class="bg-white text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-gray-200 transition-all duration-300 transform hover:scale-105 shadow-lg stagger-animation text-sm sm:text-base" style="--delay: 0.3s;">
+                            <i class="fas fa-envelope mr-2"></i> Enviar Email
+                        </button>
+                        <button onclick="openContact('linkedin')" class="bg-gray-800 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-gray-900 transition-all duration-300 transform hover:scale-105 shadow-lg stagger-animation text-sm sm:text-base" style="--delay: 0.4s;">
+                            <i class="fab fa-linkedin mr-2"></i> LinkedIn
+                        </button>
+                        <button onclick="openContact('github')" class="bg-gray-800 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-gray-900 transition-all duration-300 transform hover:scale-105 shadow-lg stagger-animation text-sm sm:text-base" style="--delay: 0.5s;">
+                            <i class="fab fa-github mr-2"></i> GitHub
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-white py-12">
+            <div class="container mx-auto px-6 text-center">
+                <p class="text-gray-400">
+                    © 2024 ryxploit. Desarrollado con ❤️ y mucho café ☕
+                </p>
+            </div>
+        </footer>
+
+        <script>
+            // Smooth scrolling
+        function scrollToSection(sectionId: string): void {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+            // Intersection Observer for animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all sections with fade animation
+            document.querySelectorAll('.section-fade').forEach(section => {
+                observer.observe(section);
+            });
+
+            // Observe stagger animations
+        document.querySelectorAll('.stagger-animation').forEach((element, index) => {
+            if (element instanceof HTMLElement) {
+                element.style.animationDelay = `${index * 0.1}s`;
+            }
+            observer.observe(element);
+        });
+
+            // Typing animation for name
+        const nameElement = document.getElementById('name');
+        const names = ['Desarrollador', 'Full Stack', 'UI/UX Designer', 'Problem Solver'];
+        let currentIndex = 0;
+        let currentText = '';
+        let isDeleting = false;
+
+        function typeWriter(): void {
+            if (!nameElement) return;
+            
+            const currentName = names[currentIndex];
+            
+            if (isDeleting) {
+                currentText = currentName.substring(0, currentText.length - 1);
+            } else {
+                currentText = currentName.substring(0, currentText.length + 1);
+            }
+            
+            nameElement.textContent = currentText;
+                
+                let typeSpeed = isDeleting ? 50 : 100;
+                
+                if (!isDeleting && currentText === currentName) {
+                    typeSpeed = 2000;
+                    isDeleting = true;
+                } else if (isDeleting && currentText === '') {
+                    isDeleting = false;
+                    currentIndex = (currentIndex + 1) % names.length;
+                    typeSpeed = 500;
+                }
+                
+                setTimeout(typeWriter, typeSpeed);
+            }
+
+            // Start typing animation
+            setTimeout(typeWriter, 1000);
+
+            // Contact functions
+        function openContact(type: string): void {
+                const modal = document.createElement('div');
+                modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+                
+                let content = '';
+                switch(type) {
+                    case 'email':
+                        content = `
+                            <div class="bg-white rounded-2xl p-8 max-w-md mx-4">
+                                <h3 class="text-2xl font-bold text-gray-800 mb-4">Contacto por Email</h3>
+                                <p class="text-gray-600 mb-6">¡Me encantaría saber de tu proyecto!</p>
+                                <div class="bg-gray-100 p-4 rounded-lg mb-4">
+                                    <p class="font-mono text-sm">tu-email@ejemplo.com</p>
+                                </div>
+                                <button onclick="this.parentElement.parentElement.remove()" class="w-full bg-black text-white py-3 rounded-lg hover:bg-gray-800 transition-colors">
+                                    Cerrar
+                                </button>
+                            </div>
+                        `;
+                        break;
+                    case 'linkedin':
+                        content = `
+                            <div class="bg-white rounded-2xl p-8 max-w-md mx-4">
+                                <h3 class="text-2xl font-bold text-gray-800 mb-4">LinkedIn</h3>
+                                <p class="text-gray-600 mb-6">Conectemos profesionalmente</p>
+                                <div class="bg-gray-100 p-4 rounded-lg mb-4">
+                                    <p class="font-mono text-sm">linkedin.com/in/tu-perfil</p>
+                                </div>
+                                <button onclick="this.parentElement.parentElement.remove()" class="w-full bg-black text-white py-3 rounded-lg hover:bg-gray-800 transition-colors">
+                                    Cerrar
+                                </button>
+                            </div>
+                        `;
+                        break;
+                    case 'github':
+                        content = `
+                            <div class="bg-white rounded-2xl p-8 max-w-md mx-4">
+                                <h3 class="text-2xl font-bold text-gray-800 mb-4">GitHub</h3>
+                                <p class="text-gray-600 mb-6">Revisa mis proyectos y código</p>
+                                <div class="bg-gray-100 p-4 rounded-lg mb-4">
+                                    <p class="font-mono text-sm">github.com/tu-usuario</p>
+                                </div>
+                                <button onclick="this.parentElement.parentElement.remove()" class="w-full bg-gray-600 text-white py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                                    Cerrar
+                                </button>
+                            </div>
+                        `;
+                        break;
+                }
+                
+                modal.innerHTML = content;
+                document.body.appendChild(modal);
+                
+                // Close on background click
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        modal.remove();
+                    }
+                });
+            }
+
+            // Add some interactive hover effects
+        document.querySelectorAll('.skill-tag').forEach(tag => {
+            tag.addEventListener('mouseenter', function(this: HTMLElement) {
+                this.style.transform = 'scale(1.05) rotate(1deg)';
+            });
+            
+            tag.addEventListener('mouseleave', function(this: HTMLElement) {
+                this.style.transform = 'scale(1) rotate(0deg)';
+            });
+        });
+        </script>
+    </body>
+</Layout>
