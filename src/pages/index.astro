@@ -370,6 +370,8 @@ import Layout from '../layouts/Layout.astro';
                 });
             }
         }
+        // Make function available globally
+        (window as any).scrollToSection = scrollToSection;
 
             // Intersection Observer for animations
             const observerOptions = {
@@ -496,6 +498,8 @@ import Layout from '../layouts/Layout.astro';
                     }
                 });
             }
+            // Make function available globally
+            (window as any).openContact = openContact;
 
             // Add some interactive hover effects
         document.querySelectorAll('.skill-tag').forEach(tag => {
