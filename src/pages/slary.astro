@@ -1,0 +1,182 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Slary - Gestor de Nóminas Digitales">
+    <main class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-br from-cyan-50 to-blue-50 py-20">
+            <div class="container mx-auto px-6 text-center">
+                <img src="/assets/slary.png" alt="Slary Logo" class="mx-auto mb-8 w-32 h-32 object-contain">
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-6">
+                    Slary
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                    Gestor de Nóminas Digital - La aplicación móvil que revoluciona la forma de organizar y gestionar tus documentos de nómina
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#features" class="btn-primary px-8 py-4 text-lg">
+                        <i class="fas fa-star mr-2"></i>
+                        Ver Características
+                    </a>
+                    <a href="#benefits" class="btn-secondary px-8 py-4 text-lg">
+                        <i class="fas fa-mobile-alt mr-2"></i>
+                        Próximamente
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-16">
+                    Características Principales
+                </h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
+                        <div class="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-file-import text-2xl text-cyan-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">📁 Importación de Documentos</h3>
+                        <p class="text-gray-600">Importa PDF individuales, archivos ZIP con múltiples nóminas, o recibe documentos directamente desde el correo electrónico. Detección automática de duplicados incluida.</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
+                        <div class="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-filter text-2xl text-cyan-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">📊 Organización y Filtrado</h3>
+                        <p class="text-gray-600">Filtra por período, mes, año y quincena. Búsqueda inteligente y agrupación automática por fecha para encontrar documentos específicos al instante.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
+                        <div class="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-eye text-2xl text-cyan-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">👁️ Visualización</h3>
+                        <p class="text-gray-600">Visor PDF integrado con interfaz moderna y Material Design 3. Modo de selección múltiple y vista de tarjetas con información resumida.</p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
+                        <div class="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-cogs text-2xl text-cyan-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">🔄 Gestión de Archivos</h3>
+                        <p class="text-gray-600">Comparte documentos con otras aplicaciones, eliminación segura, almacenamiento local protegido e información detallada de metadatos.</p>
+                    </div>
+
+                    <!-- Feature 5 -->
+                    <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
+                        <div class="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-palette text-2xl text-cyan-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">🎨 Personalización</h3>
+                        <p class="text-gray-600">Tema moderno con colores cyan, iconografía consistente, animaciones fluidas y diseño responsive adaptable a diferentes tamaños de pantalla.</p>
+                    </div>
+
+                    <!-- Feature 6 -->
+                    <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
+                        <div class="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-shield-alt text-2xl text-cyan-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">🔒 Seguridad Total</h3>
+                        <p class="text-gray-600">Todos tus documentos se almacenan de forma segura en tu dispositivo, manteniendo tu privacidad protegida sin necesidad de conexión a internet.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-4">¿Por qué elegir Slary?</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                        Más que una simple app de gestión, Slary es tu compañero financiero personal.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="space-y-8">
+                            <div class="flex items-start">
+                                <div class="bg-blue-600 w-8 h-8 rounded-full flex items-center justify-center mr-4 mt-1">
+                                    <i class="fas fa-check text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 mb-2">Ahorra Tiempo</h3>
+                                    <p class="text-gray-600">Reduce el tiempo de gestión de nóminas de horas a minutos con automatización inteligente.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="bg-blue-600 w-8 h-8 rounded-full flex items-center justify-center mr-4 mt-1">
+                                    <i class="fas fa-check text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 mb-2">Control Total</h3>
+                                    <p class="text-gray-600">Mantén un control completo de tus ingresos y deducciones con análisis detallados.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="bg-blue-600 w-8 h-8 rounded-full flex items-center justify-center mr-4 mt-1">
+                                    <i class="fas fa-check text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 mb-2">Cumplimiento Legal</h3>
+                                    <p class="text-gray-600">Cumple con todas las regulaciones fiscales y laborales mexicanas automáticamente.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="bg-blue-600 w-8 h-8 rounded-full flex items-center justify-center mr-4 mt-1">
+                                    <i class="fas fa-check text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 mb-2">Soporte 24/7</h3>
+                                    <p class="text-gray-600">Nuestro equipo de soporte está disponible para ayudarte cuando lo necesites.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="bg-white p-8 rounded-2xl shadow-lg">
+                            <i class="fas fa-mobile-alt text-6xl text-blue-600 mb-6"></i>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">Disponible Pronto</h3>
+                            <p class="text-gray-600 mb-6">Slary estará disponible para iOS y Android. Regístrate para ser notificado del lanzamiento.</p>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                                Notificarme del Lanzamiento
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Links -->
+        <section class="py-12 bg-white border-t">
+            <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Información Legal</h3>
+                    <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                        <a href="/slary/privacy" class="text-blue-600 hover:text-blue-800 font-semibold transition-colors">
+                            <i class="fas fa-shield-alt mr-2"></i>
+                            Política de Privacidad
+                        </a>
+                        <a href="/slary/terms" class="text-blue-600 hover:text-blue-800 font-semibold transition-colors">
+                            <i class="fas fa-file-contract mr-2"></i>
+                            Términos de Uso
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>

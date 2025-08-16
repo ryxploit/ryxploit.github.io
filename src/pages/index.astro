@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ProjectsSection from '../components/ProjectsSection.astro';
 ---
 
 <Layout title="ryxploit - Desarrollador Full Stack">
@@ -122,31 +123,7 @@ import Layout from '../layouts/Layout.astro';
         </section>
 
         <!-- Proyectos Section -->
-        <section id="projects" class="py-12 sm:py-16 lg:py-20 bg-white">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12 sm:mb-16 section-fade">
-                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4">🛠️ Proyectos Destacados</h2>
-                    <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">Algunos de los proyectos en los que he trabajado recientemente</p>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                    <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 border border-gray-100 card-hover section-fade">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Proyecto 1</h3>
-                        <p class="text-gray-600 mb-4 text-sm">Breve descripción del proyecto y las tecnologías utilizadas.</p>
-                        <a href="#" class="text-blue-600 font-medium hover:underline text-sm">Ver más →</a>
-                    </div>
-                    <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 border border-gray-100 card-hover section-fade">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Proyecto 2</h3>
-                        <p class="text-gray-600 mb-4 text-sm">Breve descripción del proyecto y las tecnologías utilizadas.</p>
-                        <a href="#" class="text-blue-600 font-medium hover:underline text-sm">Ver más →</a>
-                    </div>
-                    <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 border border-gray-100 card-hover section-fade">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Proyecto 3</h3>
-                        <p class="text-gray-600 mb-4 text-sm">Breve descripción del proyecto y las tecnologías utilizadas.</p>
-                        <a href="#" class="text-blue-600 font-medium hover:underline text-sm">Ver más →</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <ProjectsSection />
         <section class="py-12 sm:py-16 lg:py-20 bg-white hidden">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="max-w-6xl mx-auto">
