@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Detect package manager
         id: detect-package-manager
@@ -41,19 +41,19 @@ jobs:
           fi
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
-          node-version: "22"
+          node-version: "24"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
 
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v6
 
       - name: Install dependencies
         run: |
           if [ "${{ steps.detect-package-manager.outputs.manager }}" = "npm" ]; then
-            npm install --legacy-peer-deps
+            npm ci
           else
             ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
           fi
@@ -66,7 +66,7 @@ jobs:
           find dist -type f -name "*.html" | head -10
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./dist
 
@@ -80,4 +80,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
