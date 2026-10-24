@@ -1,311 +1,35 @@
 ---
 // Skills Section Component
+const stack = [
+  { area: 'Lenguajes', items: ['JavaScript', 'TypeScript', 'Python', 'PHP', 'Dart', 'SQL', 'HTML', 'CSS'] },
+  { area: 'Frameworks', items: ['Next.js', 'React', 'Flutter'] },
+  { area: 'IA y LLM', items: ['OpenAI', 'Claude', 'Gemini', 'GitHub Copilot', 'DeepSeek', 'MiniMax', 'OpenRouter', 'Hugging Face'] },
+  { area: 'Bases de datos', items: ['PostgreSQL', 'MySQL', 'SQLite', 'SQL Server', 'MongoDB', 'Firebase', 'Supabase'] },
+  { area: 'Backend y nube', items: ['APIs REST', 'Autenticación', 'Almacenamiento', 'Funciones serverless'] },
+  { area: 'Herramientas', items: ['Git', 'VS Code', 'Diseño UI/UX', 'Prototipado'] },
+];
 ---
 
-<section id="habilidades" class="py-20 lg:py-32 bg-slate-800/50">
-  <div class="container mx-auto px-6 lg:px-8">
-    <!-- Section Header -->
-    <div class="text-center mb-16">
-      <span class="inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-sm text-purple-400 mb-6">
-        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-        </svg>
-        Habilidades Técnicas
-      </span>
-      <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-6">
-        <span class="text-gradient">Tecnologías</span> y <span class="text-gradient">Herramientas</span>
-      </h2>
-      <p class="text-lg text-slate-400 max-w-2xl mx-auto">
-        Stack tecnológico para crear soluciones de automatización, desarrollo web/móvil e inteligencia artificial aplicada
-      </p>
+<section id="stack" class="border-t border-line">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28 grid gap-12 lg:grid-cols-12">
+    <div class="lg:col-span-4">
+      <h2 class="text-4xl sm:text-5xl font-bold tracking-tight">Stack</h2>
+      <p class="mt-4 text-lg text-muted max-w-[30ch]">Lo que uso para llevar un producto de la idea a producción.</p>
     </div>
 
-    <!-- Skills Grid -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Card 1: Desarrollo -->
-      <div class="group bg-slate-800/80 border border-slate-700/50 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300 cursor-pointer">
-        <div class="flex items-center mb-6">
-          <div class="w-14 h-14 bg-blue-500/20 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
-            <svg class="w-7 h-7 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold text-white">Desarrollo</h3>
+    <dl class="lg:col-span-8 border-t border-line">
+      {stack.map((group) => (
+        <div class="grid gap-3 sm:grid-cols-[10rem_1fr] sm:gap-6 py-5 border-b border-line">
+          <dt class="font-semibold">{group.area}</dt>
+          <dd>
+            <ul class="flex flex-wrap gap-2">
+              {group.items.map((item) => (
+                <li class="rounded-full bg-white border border-line px-3 py-1 text-[15px]">{item}</li>
+              ))}
+            </ul>
+          </dd>
         </div>
-
-        <div class="space-y-3">
-          {[
-            { name: 'JavaScript (Node.js)', level: 95, color: 'yellow' },
-            { name: 'Desarrollo Web (Frontend & Backend)', level: 90, color: 'green' },
-            { name: 'Flutter (Móvil)', level: 85, color: 'cyan' },
-            { name: 'Consumo e Integración de APIs', level: 90, color: 'purple' }
-          ].map((skill) => (
-            <div class="skill-item cursor-pointer">
-              <div class="flex justify-between items-center mb-2">
-                <span class="text-slate-300 text-sm">{skill.name}</span>
-                <span class={`text-${skill.color}-400 text-sm font-semibold`}>{skill.level}%</span>
-              </div>
-              <div class="h-2 bg-slate-700/50 rounded-full overflow-hidden">
-                <div class={`h-full bg-${skill.color}-500 rounded-full transition-all duration-1000`} style={`width: ${skill.level}%`}></div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <!-- Card 2: Bases de Datos -->
-      <div class="group bg-slate-800/80 border border-slate-700/50 rounded-2xl p-6 hover:border-emerald-500/50 transition-all duration-300 cursor-pointer">
-        <div class="flex items-center mb-6">
-          <div class="w-14 h-14 bg-emerald-500/20 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
-            <svg class="w-7 h-7 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold text-white">Bases de Datos</h3>
-        </div>
-
-        <div class="space-y-3">
-          {[
-            { name: 'MySQL', level: 85, color: 'blue' },
-            { name: 'PostgreSQL', level: 80, color: 'emerald' },
-            { name: 'Diseño de Estructuras', level: 75, color: 'purple' },
-            { name: 'Consultas y Manejo de Datos', level: 85, color: 'cyan' }
-          ].map((skill) => (
-            <div class="skill-item cursor-pointer">
-              <div class="flex justify-between items-center mb-2">
-                <span class="text-slate-300 text-sm">{skill.name}</span>
-                <span class={`text-${skill.color}-400 text-sm font-semibold`}>{skill.level}%</span>
-              </div>
-              <div class="h-2 bg-slate-700/50 rounded-full overflow-hidden">
-                <div class={`h-full bg-${skill.color}-500 rounded-full transition-all duration-1000`} style={`width: ${skill.level}%`}></div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <!-- Card 3: Datos y Reportes -->
-      <div class="group bg-slate-800/80 border border-slate-700/50 rounded-2xl p-6 hover:border-orange-500/50 transition-all duration-300 cursor-pointer">
-        <div class="flex items-center mb-6">
-          <div class="w-14 h-14 bg-orange-500/20 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
-            <svg class="w-7 h-7 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold text-white">Datos y Reportes</h3>
-        </div>
-
-        <div class="space-y-3">
-          {[
-            { name: 'Limpieza y Transformación', level: 85, color: 'orange' },
-            { name: 'Generación de Reportes', level: 90, color: 'yellow' },
-            { name: 'Integración de Múltiples Fuentes', level: 85, color: 'green' }
-          ].map((skill) => (
-            <div class="skill-item cursor-pointer">
-              <div class="flex justify-between items-center mb-2">
-                <span class="text-slate-300 text-sm">{skill.name}</span>
-                <span class={`text-${skill.color}-400 text-sm font-semibold`}>{skill.level}%</span>
-              </div>
-              <div class="h-2 bg-slate-700/50 rounded-full overflow-hidden">
-                <div class={`h-full bg-${skill.color}-500 rounded-full transition-all duration-1000`} style={`width: ${skill.level}%`}></div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <!-- Card 4: Automatización -->
-      <div class="group bg-slate-800/80 border border-slate-700/50 rounded-2xl p-6 hover:border-green-500/50 transition-all duration-300 cursor-pointer">
-        <div class="flex items-center mb-6">
-          <div class="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
-            <svg class="w-7 h-7 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold text-white">Automatización</h3>
-        </div>
-
-        <div class="space-y-3">
-          {[
-            { name: 'Google Apps Script (Avanzado)', level: 95, color: 'green' },
-            { name: 'Automatización de Procesos', level: 90, color: 'emerald' },
-            { name: 'Bots y Flujos de Trabajo', level: 85, color: 'cyan' }
-          ].map((skill) => (
-            <div class="skill-item cursor-pointer">
-              <div class="flex justify-between items-center mb-2">
-                <span class="text-slate-300 text-sm">{skill.name}</span>
-                <span class={`text-${skill.color}-400 text-sm font-semibold`}>{skill.level}%</span>
-              </div>
-              <div class="h-2 bg-slate-700/50 rounded-full overflow-hidden">
-                <div class={`h-full bg-${skill.color}-500 rounded-full transition-all duration-1000`} style={`width: ${skill.level}%`}></div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <!-- Card 5: IA -->
-      <div class="group bg-slate-800/80 border border-slate-700/50 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 cursor-pointer">
-        <div class="flex items-center mb-6">
-          <div class="w-14 h-14 bg-purple-500/20 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
-            <svg class="w-7 h-7 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold text-white">Inteligencia Artificial</h3>
-        </div>
-
-        <div class="space-y-3">
-          {[
-            { name: 'IA (Local y Nube)', level: 85, color: 'purple' },
-            { name: 'Integración de IA en Procesos', level: 80, color: 'pink' },
-            { name: 'Automatización Asistida por IA', level: 85, color: 'violet' }
-          ].map((skill) => (
-            <div class="skill-item cursor-pointer">
-              <div class="flex justify-between items-center mb-2">
-                <span class="text-slate-300 text-sm">{skill.name}</span>
-                <span class={`text-${skill.color}-400 text-sm font-semibold`}>{skill.level}%</span>
-              </div>
-              <div class="h-2 bg-slate-700/50 rounded-full overflow-hidden">
-                <div class={`h-full bg-${skill.color}-500 rounded-full transition-all duration-1000`} style={`width: ${skill.level}%`}></div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <!-- Card 6: Herramientas -->
-      <div class="group bg-slate-800/80 border border-slate-700/50 rounded-2xl p-6 hover:border-slate-500/50 transition-all duration-300 cursor-pointer">
-        <div class="flex items-center mb-6">
-          <div class="w-14 h-14 bg-slate-600/20 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
-            <svg class="w-7 h-7 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold text-white">Herramientas</h3>
-        </div>
-
-        <div class="space-y-3">
-          {[
-            { name: 'Google Workspace (Avanzado)', level: 95, color: 'blue' },
-            { name: 'Microsoft Office', level: 90, color: 'slate' },
-            { name: 'Microsoft Copilot', level: 85, color: 'violet' },
-            { name: 'Git / macOS / Linux / Windows', level: 90, color: 'orange' }
-          ].map((skill) => (
-            <div class="skill-item cursor-pointer">
-              <div class="flex justify-between items-center mb-2">
-                <span class="text-slate-300 text-sm">{skill.name}</span>
-                <span class={`text-${skill.color}-400 text-sm font-semibold`}>{skill.level}%</span>
-              </div>
-              <div class="h-2 bg-slate-700/50 rounded-full overflow-hidden">
-                <div class={`h-full bg-${skill.color}-500 rounded-full transition-all duration-1000`} style={`width: ${skill.level}%`}></div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-
-    <!-- Experience Section -->
-    <div class="mt-16">
-      <h3 class="text-2xl font-bold text-white text-center mb-10">Experiencia Profesional</h3>
-      <div class="space-y-6 max-w-4xl mx-auto">
-        <!-- Liverpool -->
-        <div class="bg-slate-800/80 border border-slate-700/50 rounded-2xl p-6 hover:border-green-500/30 transition-colors cursor-pointer">
-          <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-            <div>
-              <h4 class="text-xl font-bold text-white">Jefe de Sistemas</h4>
-              <p class="text-green-400 font-medium">Liverpool</p>
-            </div>
-            <span class="text-slate-500 text-sm mt-2 md:mt-0">2017 – Actualidad</span>
-          </div>
-          <ul class="space-y-2 text-slate-400">
-            <li class="flex items-start">
-              <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-              </svg>
-              Soporte técnico integral para usuarios y operación interna
-            </li>
-            <li class="flex items-start">
-              <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-              </svg>
-              Automatización de reportes y procesos mediante herramientas digitales
-            </li>
-            <li class="flex items-start">
-              <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-              </svg>
-              Implementación de soluciones tecnológicas para mejorar eficiencia operativa
-            </li>
-            <li class="flex items-start">
-              <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-              </svg>
-              Integración de herramientas y flujos de trabajo
-            </li>
-          </ul>
-        </div>
-
-        <!-- Pymeos -->
-        <div class="bg-slate-800/80 border border-slate-700/50 rounded-2xl p-6 hover:border-blue-500/30 transition-colors cursor-pointer">
-          <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-            <div>
-              <h4 class="text-xl font-bold text-white">Desarrollador Web</h4>
-              <p class="text-blue-400 font-medium">Pymeos, Inc</p>
-            </div>
-            <span class="text-slate-500 text-sm mt-2 md:mt-0">2017</span>
-          </div>
-          <ul class="space-y-2 text-slate-400">
-            <li class="flex items-start">
-              <svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-              </svg>
-              Desarrollo y personalización de sitios en WordPress
-            </li>
-            <li class="flex items-start">
-              <svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-              </svg>
-              Implementación de lógica de plantillas
-            </li>
-            <li class="flex items-start">
-              <svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-              </svg>
-              Manejo de contenido y datos dinámicos
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- Soft Skills -->
-    <div class="mt-16 bg-slate-800/50 border border-slate-700/50 rounded-3xl p-8">
-      <h3 class="text-2xl font-bold text-white text-center mb-10">Habilidades Blandas</h3>
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {[
-          { icon: 'lightbulb', title: 'Pensamiento Analítico', desc: 'Análisis de problemas y soluciones efectivas', color: 'yellow' },
-          { icon: 'puzzle', title: 'Resolución de Problemas', desc: 'Enfoque práctico para desafíos técnicos', color: 'green' },
-          { icon: 'book', title: 'Aprendizaje Autodidacta', desc: 'Adaptación rápida a nuevas tecnologías', color: 'blue' },
-          { icon: 'refresh', title: 'Adaptabilidad', desc: 'Flexibilidad ante cambios y nuevos retos', color: 'purple' }
-        ].map((skill) => (
-          <div class="text-center group cursor-pointer">
-            <div class={`w-16 h-16 bg-${skill.color}-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform`}>
-              <svg class={`w-8 h-8 text-${skill.color}-400`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                {skill.icon === 'lightbulb' && <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>}
-                {skill.icon === 'puzzle' && <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path>}
-                {skill.icon === 'book' && <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>}
-                {skill.icon === 'refresh' && <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>}
-              </svg>
-            </div>
-            <h4 class="font-semibold text-white mb-2">{skill.title}</h4>
-            <p class="text-sm text-slate-500">{skill.desc}</p>
-          </div>
-        ))}
-      </div>
-    </div>
+      ))}
+    </dl>
   </div>
 </section>

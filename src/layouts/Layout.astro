@@ -6,7 +6,7 @@ interface Props {
 	description?: string;
 }
 
-const { title, description = "Portfolio de Carlos León - Automation & Data Developer en Mazatlán, Sinaloa" } = Astro.props;
+const { title, description = "Carlos León, desarrollador web y móvil en Mazatlán. Fundador de Rentinno y ManoApp, y desarrollador de Presupuestos.com.mx." } = Astro.props;
 ---
 
 <!doctype html>
@@ -15,16 +15,16 @@ const { title, description = "Portfolio de Carlos León - Automation & Data Deve
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="theme-color" content="#F4F6F8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 
-		<!-- Google Fonts - Space Grotesk & DM Sans -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet">
 	</head>
-	<body class="bg-slate-900 text-slate-50 antialiased">
+	<body>
 		<slot />
 	</body>
 </html>

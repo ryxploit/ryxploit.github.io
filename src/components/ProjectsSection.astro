@@ -4,111 +4,80 @@ const projects = [
   {
     name: "Presupuestos.com.mx",
     role: "Desarrollador",
-    description: "Agente de presupuestos con IA: pídelo en palabras y genera cotizaciones profesionales en PDF desde el celular, con IVA, logo y folio consecutivo, listas para enviar por WhatsApp.",
+    description: "Un agente de presupuestos: le dices en palabras qué vas a cobrar y a quién, y arma la cotización en PDF con tu logo, IVA desglosado y folio consecutivo, lista para mandar por WhatsApp desde el celular.",
     url: "https://www.presupuestos.com.mx/",
-    logo: "/assets/presupuestos.png",
-    hoverBorder: "hover:border-green-500/50",
-    badgeClass: "bg-green-500/20 text-green-400",
-    buttonClass: "bg-green-500 group-hover:bg-green-400 text-slate-900",
+    domain: "presupuestos.com.mx",
+    shot: "/assets/shot-presupuestos.jpg",
   },
   {
     name: "ManoApp",
     role: "Fundador y desarrollador",
-    description: "App que conecta clientes con profesionales verificados del hogar en Mazatlán: publica tu solicitud, compara cotizaciones con precio fijo y paga directo al terminar.",
+    description: "App para encontrar plomeros, electricistas y expertos en limpieza verificados en Mazatlán. Publicas lo que necesitas, comparas cotizaciones con precio fijo y pagas directo al terminar.",
     url: "https://manoapp.mx/",
-    logo: "/assets/manoapp.webp",
-    hoverBorder: "hover:border-orange-500/50",
-    badgeClass: "bg-orange-500/20 text-orange-400",
-    buttonClass: "bg-orange-500 group-hover:bg-orange-400 text-slate-900",
+    domain: "manoapp.mx",
+    shot: "/assets/shot-manoapp.jpg",
   },
   {
     name: "Rentinno",
     role: "Fundador y desarrollador",
-    description: "RentiFlow, asistente con IA para WhatsApp Business que automatiza la atención de rentas vacacionales: lead scoring, pipeline drag & drop, matching de propiedades y recordatorios de visitas.",
+    description: "RentiFlow atiende a los huéspedes de rentas vacacionales por WhatsApp las 24 horas: califica fechas y presupuesto, sugiere propiedades y avisa al anfitrión cuando hay una reserva lista para cerrar.",
     url: "https://www.rentinno.com.mx/",
-    logo: "/assets/rentinno.png",
-    hoverBorder: "hover:border-emerald-500/50",
-    badgeClass: "bg-emerald-500/20 text-emerald-400",
-    buttonClass: "bg-emerald-500 group-hover:bg-emerald-400 text-slate-900",
+    domain: "rentinno.com.mx",
+    shot: "/assets/shot-rentinno.jpg",
   },
 ];
 ---
 
-<section id="proyectos" class="py-20 lg:py-32 bg-slate-900">
-  <div class="container mx-auto px-6 lg:px-8">
-    <!-- Section Header -->
-    <div class="text-center mb-16">
-      <span class="inline-flex items-center px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full text-sm text-green-400 mb-6">
-        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
-        </svg>
-        Portafolio
-      </span>
-      <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-6">
-        Proyectos <span class="text-gradient">Destacados</span>
-      </h2>
-      <p class="text-lg text-slate-400 max-w-2xl mx-auto">
-        Una selección de proyectos que demuestran mi experiencia en desarrollo full stack, diseño UI/UX y soluciones innovadoras
+<section id="proyectos" class="border-t border-line">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+    <div class="max-w-2xl">
+      <h2 class="text-4xl sm:text-5xl font-bold tracking-tight">Proyectos</h2>
+      <p class="mt-4 text-lg text-muted">
+        Tres productos en uso, de la idea al código. Dos los fundé; en todos escribo el software.
       </p>
     </div>
 
-    <!-- Projects Grid -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    <div class="mt-14 lg:mt-20 divide-y divide-line">
       {projects.map((project) => (
-        <a
-          href={project.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          class={`group flex flex-col bg-slate-800/80 border border-slate-700/50 rounded-3xl p-8 ${project.hoverBorder} transition-all duration-300 cursor-pointer`}
-        >
-          <div class="text-center mb-6">
-            <div class="h-24 w-full bg-white rounded-2xl flex items-center justify-center p-4 mb-6">
-              <img src={project.logo} alt={`Logo de ${project.name}`} class="max-h-16 w-auto object-contain" loading="lazy" decoding="async" />
-            </div>
-            <h3 class="text-2xl font-bold text-white mb-2">{project.name}</h3>
-            <span class={`inline-flex items-center px-3 py-1 ${project.badgeClass} rounded-full text-sm font-medium`}>
-              {project.role}
-            </span>
+        <article class="grid gap-8 lg:grid-cols-12 lg:gap-12 py-12 first:pt-0 last:pb-0">
+          <div class="lg:col-span-5 lg:py-4 flex flex-col">
+            <p class="text-sm font-medium text-muted">{project.role}</p>
+            <h3 class="mt-2 text-3xl sm:text-4xl font-bold tracking-tight">{project.name}</h3>
+            <p class="mt-5 text-lg leading-relaxed text-ink/80 max-w-[46ch]">{project.description}</p>
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-8 self-start inline-flex items-center gap-2 font-semibold underline decoration-marigold decoration-[3px] underline-offset-[6px] hover:decoration-ink transition-colors"
+            >
+              Visitar {project.domain}
+              <span class="sr-only">(abre en una pestaña nueva)</span>
+            </a>
           </div>
 
-          <p class="text-slate-400 mb-6 text-center leading-relaxed flex-1">
-            {project.description}
-          </p>
-
-          <span class={`flex items-center justify-center px-6 py-3 ${project.buttonClass} font-semibold rounded-xl transition-all duration-200 group-hover:scale-105`}>
-            <svg class="w-5 h-5 mr-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-            </svg>
-            Ver Sitio
-          </span>
-        </a>
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            tabindex="-1"
+            aria-hidden="true"
+            class="lg:col-span-7 block rounded-2xl border border-line bg-white shadow-[0_24px_48px_-28px_rgb(21_35_59/0.35)] overflow-hidden transition-transform duration-300 hover:-translate-y-1"
+          >
+            <div class="flex items-center h-9 px-4 border-b border-line bg-paper/60">
+              <span class="mx-auto rounded-md bg-white border border-line px-3 py-0.5 text-xs text-muted">{project.domain}</span>
+            </div>
+            <img
+              src={project.shot}
+              alt={`Página principal de ${project.name}`}
+              width="1280"
+              height="800"
+              loading="lazy"
+              decoding="async"
+              class="block w-full h-auto"
+            />
+          </a>
+        </article>
       ))}
-    </div>
-
-    <!-- GitHub CTA -->
-    <div class="text-center mt-16">
-      <div class="bg-slate-800/50 border border-slate-700/50 rounded-3xl p-10 max-w-2xl mx-auto">
-        <div class="w-20 h-20 bg-slate-700/50 rounded-2xl flex items-center justify-center mx-auto mb-6">
-          <svg class="w-10 h-10 text-slate-400" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-          </svg>
-        </div>
-        <h3 class="text-2xl font-bold text-white mb-4">¿Quieres ver más proyectos?</h3>
-        <p class="text-slate-400 mb-6">
-          Explora mi repositorio completo en GitHub con más de 50 proyectos, desde aplicaciones web hasta herramientas de automatización.
-        </p>
-        <a
-          href="https://github.com/ryxploit"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="group inline-flex items-center px-8 py-4 bg-white hover:bg-slate-100 text-slate-900 font-semibold rounded-xl transition-all duration-200 hover:scale-105 cursor-pointer"
-        >
-          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-          </svg>
-          Ver GitHub
-        </a>
-      </div>
     </div>
   </div>
 </section>
